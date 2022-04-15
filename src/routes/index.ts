@@ -9,11 +9,8 @@ const router = Router();
 
 router.use(authenticateRoutes);
 
-// Middleware para autenticação de todas as rotas abaixo
-router.use(ensureAuthenticated);
-
+router.use('/users', usersRoutes);
 router.use('/categories', categoriesRoutes);
 router.use('/specifications', specificationRoutes);
-router.use('/users', usersRoutes);
 
 export { router };
