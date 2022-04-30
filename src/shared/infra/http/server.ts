@@ -4,12 +4,14 @@ import swaggerUi from 'swagger-ui-express';
 
 import 'reflect-metadata';
 
-import { router } from './routes';
-import swaggerJson from './swagger.json';
+import { router } from '@shared/infra/http/routes';
+import swaggerJson from '../../../swagger.json';
 
-import './database';
+import '@shared/infra/typeorm';
+
 import '@shared/container';
-import { AppError } from '@errors/AppError';
+
+import { AppError } from '@shared/errors/AppError';
 
 const app = express();
 app.use(express.json());
