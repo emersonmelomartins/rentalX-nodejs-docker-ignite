@@ -28,7 +28,61 @@ Em construção...
 <br>
 
 ## Requisitos
-Em construção...
+### Requisitos Funcionais
+- Cadastro de carros
+  - Deve ser possível cadastrar um novo carro;
+  - Deve ser possível listar todas as categorias;
+
+- Listagem de Carros
+  - Deve ser possível listar todos os carros disponíveis;
+  - Deve ser possível listar todos os carros disponíveis por categoria;
+  - Deve ser possível listar todos os carros disponíveis por marca;
+  - Deve ser possível listar todos os carros disponíveis por nome do carro;
+
+- Cadastro de especificação no carro
+  - Deve ser possível cadastrar uma especificação para um carro;
+  - Deve ser possível listar todas as especificações;
+  - Deve ser possível listar todos os carros;
+
+- Cadastro de imagens do carro
+  - Deve ser possível cadastrar a imagem do carro;
+  - Deve ser possível listar todos os carros;
+
+- Aluguel de carro
+  - Deve ser possível cadastrar um aluguel;
+
+<br>
+<hr>
+
+### Requisitos Não Funcionais
+- Cadastro de imagens do carro
+  - Utilizar o 'multer' para upload dos arquivos
+<br>
+<hr>
+
+### Regra de Negócio
+- Cadastro de carros
+  - Não deve ser possível cadastrar um carro com uma placa existente;
+  - Não deve ser possível alterar a placa de um carro já cadastrado;
+  - O carro deve ser cadastrado, por padrão, com disponibilidade;
+  - O usuário responsável pelo cadastro deve ser um usuário administrador;
+
+- Listagem de Carros
+  - O usuário não precisa estar logado no sistema;
+
+- Cadastro de especificação no carro
+  - Não deve ser possível cadastrar uma especificação para um carro não cadastrado;
+  - Não deve ser possível cadastrar uma especificação já existente para o mesmo carro;
+  - O usuário responsável pelo cadastro deve ser um usuário administrador;
+
+- Cadastro de imagens do carro
+  - O usuário deve poder cadastrar mais de uma imagem para o mesmo carro;
+  - O usuário responsável pelo cadastro deve ser um usuário administrador;
+
+- Aluguel de carro
+  - O aluguel deve ter duração mínima de 24 horas;
+  - Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo usuário;
+  - Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo carro;
 <br>
 <hr>
 <br>
