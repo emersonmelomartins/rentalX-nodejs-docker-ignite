@@ -29,26 +29,26 @@ Em construção...
 
 ## Requisitos
 ### Requisitos Funcionais
-- Cadastro de carros
-  - Deve ser possível cadastrar um novo carro;
+- [X] Cadastro de carros
+  - [X] Deve ser possível cadastrar um novo carro;
 
-- Listagem de Carros
-  - Deve ser possível listar todos os carros disponíveis;
-  - Deve ser possível listar todos os carros disponíveis por categoria;
-  - Deve ser possível listar todos os carros disponíveis por marca;
-  - Deve ser possível listar todos os carros disponíveis por nome do carro;
+- [] Listagem de Carros
+  - [X] Deve ser possível listar todos os carros disponíveis;
+  - [X] Deve ser possível listar todos os carros disponíveis por categoria;
+  - [X] Deve ser possível listar todos os carros disponíveis por marca;
+  - [X] Deve ser possível listar todos os carros disponíveis por nome do carro;
 
-- Cadastro de especificação no carro
-  - Deve ser possível cadastrar uma especificação para um carro;
-  - Deve ser possível listar todas as especificações;
-  - Deve ser possível listar todos os carros;
+- [] Cadastro de especificação no carro
+  - [] Deve ser possível cadastrar uma especificação para um carro;
+  - [] Deve ser possível listar todas as especificações;
+  - [] Deve ser possível listar todos os carros;
 
-- Cadastro de imagens do carro
-  - Deve ser possível cadastrar a imagem do carro;
-  - Deve ser possível listar todos os carros;
+- [] Cadastro de imagens do carro
+  - [] Deve ser possível cadastrar a imagem do carro;
+  - [] Deve ser possível listar todos os carros;
 
-- Aluguel de carro
-  - Deve ser possível cadastrar um aluguel;
+- [] Aluguel de carro
+  - [] Deve ser possível cadastrar um aluguel;
 
 <br>
 <hr>
