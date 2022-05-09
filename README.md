@@ -13,7 +13,7 @@
   <a href="#estrutura">Estrutura</a> •
   <a href="#requisitos">Requisitos</a> •
   <a href="#instalação">Instalação</a> •
-    <a href="#tecnologias">Tecnologias</a>
+  <a href="#tecnologias">Tecnologias</a>
 </p>
 
 ## Features
