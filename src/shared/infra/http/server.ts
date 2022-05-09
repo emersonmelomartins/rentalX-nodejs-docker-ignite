@@ -7,11 +7,13 @@ import 'reflect-metadata';
 import { router } from '@shared/infra/http/routes';
 import swaggerJson from '../../../swagger.json';
 
-import '@shared/infra/typeorm';
+import createConnection from '@shared/infra/typeorm';
 
 import '@shared/container';
 
 import { AppError } from '@shared/errors/AppError';
+
+createConnection();
 
 const app = express();
 app.use(express.json());
