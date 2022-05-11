@@ -38,10 +38,8 @@ Em construção...
   - [X] Deve ser possível listar todos os carros disponíveis por marca;
   - [X] Deve ser possível listar todos os carros disponíveis por nome do carro;
 
-- [] Cadastro de especificação no carro
-  - [] Deve ser possível cadastrar uma especificação para um carro;
-  - [] Deve ser possível listar todas as especificações;
-  - [] Deve ser possível listar todos os carros;
+- [X] Cadastro de especificação no carro
+  - [X] Deve ser possível cadastrar uma especificação para um carro;
 
 - [] Cadastro de imagens do carro
   - [] Deve ser possível cadastrar a imagem do carro;
@@ -63,7 +61,7 @@ Em construção...
 - Cadastro de carros
   - Não deve ser possível cadastrar um carro com uma placa existente;
   - O carro deve ser cadastrado, por padrão, com disponibilidade;
-  - * O usuário responsável pelo cadastro deve ser um usuário administrador;
+  - O usuário responsável pelo cadastro deve ser um usuário administrador;
 
 - Listagem de Carros
   - O usuário não precisa estar logado no sistema;
