@@ -29,23 +29,22 @@ Em construção...
 
 ## Requisitos
 ### Requisitos Funcionais
-- [X] Cadastro de carros
+- Cadastro de carros
   - [X] Deve ser possível cadastrar um novo carro;
 
-- [] Listagem de Carros
+- Listagem de Carros
   - [X] Deve ser possível listar todos os carros disponíveis;
   - [X] Deve ser possível listar todos os carros disponíveis por categoria;
   - [X] Deve ser possível listar todos os carros disponíveis por marca;
   - [X] Deve ser possível listar todos os carros disponíveis por nome do carro;
 
-- [X] Cadastro de especificação no carro
+- Cadastro de especificação no carro
   - [X] Deve ser possível cadastrar uma especificação para um carro;
 
-- [] Cadastro de imagens do carro
-  - [] Deve ser possível cadastrar a imagem do carro;
-  - [] Deve ser possível listar todos os carros;
+- Cadastro de imagens do carro
+  - [X] Deve ser possível cadastrar a imagem do carro;
 
-- [] Aluguel de carro
+- Aluguel de carro
   - [] Deve ser possível cadastrar um aluguel;
 
 <br>
@@ -53,7 +52,7 @@ Em construção...
 
 ### Requisitos Não Funcionais
 - Cadastro de imagens do carro
-  - Utilizar o 'multer' para upload dos arquivos
+  - [X] Utilizar o 'multer' para upload dos arquivos
 <br>
 <hr>
 
@@ -79,6 +78,7 @@ Em construção...
   - O aluguel deve ter duração mínima de 24 horas;
   - Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo usuário;
   - Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo carro;
+  - O usuário deve estar logado na aplicação;
 <br>
 <hr>
 <br>
