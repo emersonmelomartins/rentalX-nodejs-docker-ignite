@@ -5,7 +5,7 @@ import { Connection } from 'typeorm';
 import { hash } from 'bcryptjs';
 import { v4 as uuid } from 'uuid';
 
-describe('Create Category Controller', () => {
+describe('List Categories Controller', () => {
   let connection: Connection;
 
   beforeAll(async () => {
@@ -35,7 +35,7 @@ describe('Create Category Controller', () => {
     await connection.close();
   });
 
-  it('should be able to create a new category', async () => {
+  it('should be able to list all categories', async () => {
     const responseToken = await request(app).post('/sessions').send({
       email: 'emerson25xd@gmail.com',
       password: '1234',
@@ -43,7 +43,7 @@ describe('Create Category Controller', () => {
 
     const { token } = responseToken.body;
 
-    const response = await request(app)
+    const createCategoryResponse = await request(app)
       .post('/categories')
       .send({
         name: 'Category Supertest Name',
@@ -53,27 +53,12 @@ describe('Create Category Controller', () => {
         Authorization: `Bearer ${token}`,
       });
 
-    expect(response.status).toBe(201);
-  });
+    const response = await request(app).get('/categories');
 
-  it('should not be able to create a new category if category name already exists', async () => {
-    const responseToken = await request(app).post('/sessions').send({
-      email: 'emerson25xd@gmail.com',
-      password: '1234',
-    });
+    console.log(createCategoryResponse.status);
+    console.log(response.status);
 
-    const { token } = responseToken.body;
-
-    const response = await request(app)
-      .post('/categories')
-      .send({
-        name: 'Category Supertest Name',
-        description: 'Category Supertest Desc',
-      })
-      .set({
-        Authorization: `Bearer ${token}`,
-      });
-
-    expect(response.status).toBe(400);
+    expect(response.status).toBe(200);
+    expect(response.body.length).toBe(1);
   });
 });
