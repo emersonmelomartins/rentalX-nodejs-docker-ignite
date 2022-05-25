@@ -1,3 +1,4 @@
+import { ICreateRentalDTO } from '@modules/rentals/dtos/ICreateRentalDTO';
 import { Rental } from '@modules/rentals/infra/typeorm/entities/Rental';
 import { IRentalsRepository } from '../IRentalsRepository';
 
@@ -29,6 +30,14 @@ class InMemoryRentalsRepository implements IRentalsRepository {
     this.rentals.push(rental);
 
     return rental;
+  }
+
+  async findById(id: string): Promise<Rental> {
+    return this.rentals.find((r) => r.id === id);
+  }
+
+  async findAllByUser(user_id: string): Promise<Rental[]> {
+    return this.rentals.filter((r) => r.user_id === user_id);
   }
 }
 

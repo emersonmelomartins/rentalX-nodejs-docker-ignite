@@ -8,7 +8,6 @@ async function create() {
 
   const id = uuid();
   const password = await hash('1234', 8);
-  console.log(password);
 
   connection
     .query(
