@@ -51,8 +51,11 @@ Em construção...
 - Aluguel de carro
   - [X] Deve ser possível cadastrar um aluguel;
 
+- Listagem de aluguel por usuário
+  - [] Deve ser possível realizar a busca de todos os alugueis para o usuário;
+
 - Devolução de carro
-  - [] Deve ser possível realizar a devolução de um carro;
+  - [X] Deve ser possível realizar a devolução de um carro;
 
 <br>
 <hr>
@@ -87,6 +90,9 @@ Em construção...
   - Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo carro;
   - O usuário deve estar logado na aplicação;
   - Ao realizar um aluguel, o status do carro deverá ser alterado para indisponível;
+
+- Listagem de alugueis por usuário
+  - O usuário deve estar logado na aplicação;
 
 - Devolução de carro
   - Se o carro for devolvido com menos de 24 horas, deverá ser cobrado diária completa;
