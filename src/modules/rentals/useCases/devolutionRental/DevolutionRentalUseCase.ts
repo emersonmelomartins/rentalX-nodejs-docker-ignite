@@ -22,10 +22,18 @@ class DevolutionRentalUseCase {
     @inject('DayjsDateProvider')
     private dateProvider: IDateProvider
   ) {}
-  async execute({ id }: IRequest): Promise<Rental> {
+  async execute({ id, user_id }: IRequest): Promise<Rental> {
     const MIN_DAILY = 1;
 
     const rental = await this.rentalsRepository.findById(id);
+
+    if (!rental) {
+      throw new AppError('Rental not found.', 404);
+    }
+
+    if(rental.end_date) {
+      throw new AppError(`This rent already ended at ${rental.end_date.toLocaleDateString()}`)
+    }
 
     const car = await this.carsRepository.findById(rental.car_id);
 
@@ -35,17 +43,20 @@ class DevolutionRentalUseCase {
 
     const dateNow = this.dateProvider.dateNow();
 
+    // Verificação diária
     let daily = this.dateProvider.compareInDays(rental.start_date, dateNow);
 
     if (daily < 1) {
       daily = MIN_DAILY;
     }
 
+    // Verificação atraso
     const delay = this.dateProvider.compareInDays(
       dateNow,
       rental.expected_return_date
     );
 
+    // Soma diária com atraso
     let total = 0;
 
     if (delay > 0) {
