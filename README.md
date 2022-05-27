@@ -1,7 +1,7 @@
 <h1 align="center">
   <img src="https://i.imgur.com/oUAKMC5.png"/>
   <br>
-  Rental X - Locação de Carros
+  Rent X - Locação de Carros
   <br>
 </h1>
 
