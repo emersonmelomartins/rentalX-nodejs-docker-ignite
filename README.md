@@ -52,10 +52,15 @@ Em construção...
   - [X] Deve ser possível cadastrar um aluguel;
 
 - Listagem de aluguel por usuário
-  - [] Deve ser possível realizar a busca de todos os alugueis para o usuário;
+  - [X] Deve ser possível realizar a busca de todos os alugueis para o usuário;
 
 - Devolução de carro
   - [X] Deve ser possível realizar a devolução de um carro;
+
+- Recuperar senha
+  - [] Deve ser possível o usuário recuperar a senha informando o e-mail;
+  - [] O usuário deve receber um e-mail com passo-a-passo para recuperação da senha;
+  - [] O usuário deve conseguir inserir uma nova senha;
 
 <br>
 <hr>
@@ -68,39 +73,43 @@ Em construção...
 
 ### Regra de Negócio
 - Cadastro de carros
-  - Não deve ser possível cadastrar um carro com uma placa existente;
-  - O carro deve ser cadastrado, por padrão, com disponibilidade;
-  - O usuário responsável pelo cadastro deve ser um usuário administrador;
+  - [X] Não deve ser possível cadastrar um carro com uma placa existente;
+  - [X] O carro deve ser cadastrado, por padrão, com disponibilidade;
+  - [X] O usuário responsável pelo cadastro deve ser um usuário administrador;
 
 - Listagem de Carros
-  - O usuário não precisa estar logado no sistema;
+  - [X] O usuário não precisa estar logado no sistema;
 
 - Cadastro de especificação no carro
-  - Não deve ser possível cadastrar uma especificação para um carro não cadastrado;
-  - Não deve ser possível cadastrar uma especificação já existente para o mesmo carro;
-  - O usuário responsável pelo cadastro deve ser um usuário administrador;
+  - [X] Não deve ser possível cadastrar uma especificação para um carro não cadastrado;
+  - [X] Não deve ser possível cadastrar uma especificação já existente para o mesmo carro;
+  - [X] O usuário responsável pelo cadastro deve ser um usuário administrador;
 
 - Cadastro de imagens do carro
-  - O usuário deve poder cadastrar mais de uma imagem para o mesmo carro;
-  - O usuário responsável pelo cadastro deve ser um usuário administrador;
+  - [X] O usuário deve poder cadastrar mais de uma imagem para o mesmo carro;
+  - [X] O usuário responsável pelo cadastro deve ser um usuário administrador;
 
 - Aluguel de carro
-  - O aluguel deve ter duração mínima de 24 horas;
-  - Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo usuário;
-  - Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo carro;
-  - O usuário deve estar logado na aplicação;
-  - Ao realizar um aluguel, o status do carro deverá ser alterado para indisponível;
+  - [X] O aluguel deve ter duração mínima de 24 horas;
+  - [X] Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo usuário;
+  - [X] Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo carro;
+  - [X] O usuário deve estar logado na aplicação;
+  - [X] Ao realizar um aluguel, o status do carro deverá ser alterado para indisponível;
 
 - Listagem de alugueis por usuário
-  - O usuário deve estar logado na aplicação;
+  - [X] O usuário deve estar logado na aplicação;
 
 - Devolução de carro
-  - Se o carro for devolvido com menos de 24 horas, deverá ser cobrado diária completa;
-  - Ao realizar a devolução, o carro deverá ser liberado para outro aluguel;
-  - Ao realizar a devolução, deverá ser calculado o total do aluguel;
-  - Caso o horário de devolução seja superior ao horário previsto de entrega, deverá ser cobrado multa proporcional aos dias de atraso;
-  - Caso haja multa, deverá ser somado ao total do aluguel;
-  - O usuário deve estar logado na aplicação;
+  - [X] Se o carro for devolvido com menos de 24 horas, deverá ser cobrado diária completa;
+  - [X] Ao realizar a devolução, o carro deverá ser liberado para outro aluguel;
+  - [X] Ao realizar a devolução, deverá ser calculado o total do aluguel;
+  - [X] Caso o horário de devolução seja superior ao horário previsto de entrega, deverá ser cobrado multa proporcional aos dias de atraso;
+  - [X] Caso haja multa, deverá ser somado ao total do aluguel;
+  - [X] O usuário deve estar logado na aplicação;
+
+- Recuperar senha
+  - [X] O usuário precisa informar uma nova senha;
+  - [X] O link enviado para recuperação deve expirar em 3 horas;
 <br>
 <hr>
 <br>
