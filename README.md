@@ -135,6 +135,22 @@ yarn
 npm install
 ```
 
+### Carregando tabelas banco de dados
+```bash
+# yarn
+yarn typeorm migration:run
+# node
+npm run typeorm migration:run
+```
+
+### Seed de usuário administrador
+```bash
+# yarn
+yarn seed:admin
+# node
+npm run seed:admin
+```
+
 ### Execução do projeto
 ```bash
 # docker
@@ -150,6 +166,14 @@ docker-compose up -d
 yarn dev
 # node
 npm run dev
+```
+
+### Execução de testes da aplicação
+```bash
+# yarn
+yarn test
+# node
+npm run test
 ```
 
 Em construção...
