@@ -59,9 +59,9 @@ Em construção...
   - [X] Deve ser possível realizar a devolução de um carro;
 
 - Recuperar senha
-  - [] Deve ser possível o usuário recuperar a senha informando o e-mail;
-  - [] O usuário deve receber um e-mail com passo-a-passo para recuperação da senha;
-  - [] O usuário deve conseguir inserir uma nova senha;
+  - [X] Deve ser possível o usuário recuperar a senha informando o e-mail;
+  - [X] O usuário deve receber um e-mail com passo-a-passo para recuperação da senha;
+  - [X] O usuário deve conseguir inserir uma nova senha;
 
 <br>
 <hr>
@@ -191,10 +191,17 @@ Em construção...
 - Bcryptjs
 - Dayjs
 - Multer
-- Typeorm
+- TypeORM
 - Tsyringe
 - Jest
 - Supertest
+- AWS SDK
+- Docker/Docker-Compose
+- Handlebars
+- JWT
+- Postgres
+- Swagger
+- BCryptJS
 
 Em construção...
 <br>
