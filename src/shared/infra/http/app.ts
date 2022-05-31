@@ -12,6 +12,7 @@ import createConnection from '@shared/infra/typeorm';
 import '@shared/container';
 
 import { AppError } from '@shared/errors/AppError';
+import upload from '@config/upload';
 
 // Caso sem docker utilizar "localhost" como parâmetro da função abaixo
 createConnection();
@@ -20,6 +21,10 @@ const app = express();
 app.use(express.json());
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerJson));
+
+// Cria uma espécie de "alias" pra acessar os arquivos localmente
+app.use("/avatar", express.static(`${upload.tmpFolder}/avatar`))
+app.use("/cars", express.static(`${upload.tmpFolder}/cars`))
 
 app.use(router);
 

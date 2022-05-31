@@ -1,5 +1,6 @@
 import { CreateUserController } from '@modules/accounts/useCases/createUser/CreateUserController';
 import { UpdateUserAvatarController } from '@modules/accounts/useCases/updateUserAvatar/UpdateUserAvatarController';
+import { ShowUserProfileController } from '@modules/accounts/useCases/showUserProfile/ShowUserProfileController';
 import { Router } from 'express';
 import multer from 'multer';
 import { ensureAuthenticated } from '../middlewares/ensureAUthenticated';
@@ -10,6 +11,7 @@ const usersRoutes = Router();
 const uploadAvatar = multer(uploadConfig);
 
 const createUserController = new CreateUserController();
+const showUserProfileController = new ShowUserProfileController();
 const updateUserController = new UpdateUserAvatarController();
 
 usersRoutes.post('/', createUserController.handle);
@@ -21,5 +23,6 @@ usersRoutes.patch(
   uploadAvatar.single('avatar'),
   updateUserController.handle
 );
+usersRoutes.get('/profile', showUserProfileController.handle);
 
 export { usersRoutes };

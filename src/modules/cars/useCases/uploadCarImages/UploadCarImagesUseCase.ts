@@ -1,5 +1,6 @@
 import { ICarsImagesRepository } from '@modules/cars/repositories/ICarsImagesRepository';
 import { ICarsRepository } from '@modules/cars/repositories/ICarsRepository';
+import { IStorageProvider } from '@shared/container/providers/StorageProvider/IStorageProvider';
 import { AppError } from '@shared/errors/AppError';
 import { deleteFile } from '@utils/file';
 import { inject, injectable } from 'tsyringe';
@@ -17,7 +18,10 @@ class UploadCarImagesUseCase {
     private carsImagesRepository: ICarsImagesRepository,
 
     @inject('CarsRepository')
-    private carsRepository: ICarsRepository
+    private carsRepository: ICarsRepository,
+
+    @inject("StorageProvider")
+    private storageProvider: IStorageProvider
   ) {}
 
   async execute({ car_id, images_name }: IRequest): Promise<void> {
@@ -33,15 +37,9 @@ class UploadCarImagesUseCase {
       throw new AppError('Car does not exists.', 404);
     }
 
-    const carImages = await this.carsImagesRepository.findAllById(car_id);
-
-    carImages.forEach(async (carImage) => {
-      await this.carsImagesRepository.deleteImage(carImage.id);
-      await deleteFile(`./tmp/cars/${carImage.image_name}`);
-    });
-
     images_name.map(async (image) => {
       await this.carsImagesRepository.create(car_id, image);
+      await this.storageProvider.save(image, "cars");
     });
   }
 }
