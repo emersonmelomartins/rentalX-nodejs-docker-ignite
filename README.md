@@ -195,7 +195,7 @@ Em construção...
 - Tsyringe
 - Jest
 - Supertest
-- AWS SDK
+- AWS SDK (IAM, S3, SES, EC2)
 - Docker/Docker-Compose
 - Handlebars
 - JWT
