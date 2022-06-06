@@ -3,3 +3,4 @@ node_modules
 tmp/avatar/**
 tmp/cars/**
 .env
+ormconfig.json
