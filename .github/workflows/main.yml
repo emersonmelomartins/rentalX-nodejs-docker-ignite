@@ -47,5 +47,5 @@ jobs:
           #password: ${{ secrets.PASSWORD }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          source: "., !node_modules"
-          target: "test_github_actions"
+          source: ", !node_modules"
+          target: "~/app/rentalX-nodejs-docker-ignite"
