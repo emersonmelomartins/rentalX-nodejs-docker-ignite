@@ -11,10 +11,8 @@
 
 <p align="center">
   <a href="#features">Features</a> •
-  <a href="#estrutura">Estrutura</a> •
   <a href="#requisitos">Requisitos</a> •
-  <a href="#instalação">Instalação</a> •
-  <a href="#tecnologias">Tecnologias</a>
+  <a href="#instalação/execução">Instalação</a>
 </p>
 
 <hr>
@@ -25,12 +23,30 @@ Essa aplicação possui princípios do SOLID, você pode consultar mais informa�
 Além de seguir boas práticas do SOLID, essa aplicação foi desenvolvida em conjunto de Testes Unitários e Testes de Integração para a redução de erros e auxilio durante o desenvolvimento.
 
 
-Para seguir os temas citados acima, foram utilizados diversas ferramentas úteis como por exemplo:
+Para seguir os temas citados acima, foram utilizados diversas ferramentas úteis
 
-...
+- NodeJS
+- Express
+- Typescript
+- ESLint
+- Prettier
+- Bcryptjs
+- Dayjs
+- Multer
+- TypeORM
+- Tsyringe
+- Jest
+- Supertest
+- AWS SDK (IAM, S3, SES, EC2)
+- Docker/Docker-Compose
+- Handlebars
+- JWT
+- Postgres
+- Swagger
+- BCryptJS
+- CI/CD (Github Actions)
 
-Em construção...
-<hr>
+<br>
 
 ## Requisitos
 ### Requisitos Funcionais
@@ -111,8 +127,7 @@ Em construção...
 - Recuperar senha
   - [X] O usuário precisa informar uma nova senha;
   - [X] O link enviado para recuperação deve expirar em 3 horas;
-<br>
-<hr>
+
 <br>
 
 ## Instalação/Execução
@@ -175,35 +190,3 @@ yarn test
 # node
 npm run test
 ```
-
-Em construção...
-
-<br>
-<hr>
-<br>
-
-## Tecnologias
-- NodeJS
-- Express
-- Typescript
-- ESLint
-- Prettier
-- Bcryptjs
-- Dayjs
-- Multer
-- TypeORM
-- Tsyringe
-- Jest
-- Supertest
-- AWS SDK (IAM, S3, SES, EC2)
-- Docker/Docker-Compose
-- Handlebars
-- JWT
-- Postgres
-- Swagger
-- BCryptJS
-
-Em construção...
-<br>
-<hr>
-<br>
