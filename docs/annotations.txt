@@ -1,0 +1,8 @@
+nginx config reverse proxy
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-20-04-pt
+
+pm2 server running in background on aws server
+https://pm2.keymetrics.io/docs/usage/quick-start/
+
+it has github actions to run every update
+https://github.com/emersonmelomartins/rentalX-nodejs-docker-ignite/actions
