@@ -1,9 +1,9 @@
 import { Connection, createConnection, getConnectionOptions } from 'typeorm';
 
+// Old
 // interface IOptions {
 //   host: string;
 // }
-
 // getConnectionOptions().then((options) => {
 //   const newOptions = options as IOptions;
 //   newOptions.host = 'database_ignite';
@@ -13,6 +13,7 @@ import { Connection, createConnection, getConnectionOptions } from 'typeorm';
 //   });
 // });
 
+// Configuração customizavel para 'localhost' ou 'database_ignite' docker
 // export default async (host = 'database_ignite'): Promise<Connection> => {
 //   const defaultOptions = await getConnectionOptions();
 
@@ -27,6 +28,7 @@ import { Connection, createConnection, getConnectionOptions } from 'typeorm';
 //   );
 // };
 
+// Configuração para rodar no AWS
 export default async (): Promise<Connection> => {
   const defaultOptions = await getConnectionOptions();
 
