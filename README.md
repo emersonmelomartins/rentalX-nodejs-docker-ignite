@@ -45,6 +45,9 @@ Para seguir os temas citados acima, foram utilizados diversas ferramentas úteis
 - Swagger
 - BCryptJS
 - CI/CD (Github Actions)
+- Redis
+- Rate Limiter Flexible
+- Sentry
 
 <br>
 
